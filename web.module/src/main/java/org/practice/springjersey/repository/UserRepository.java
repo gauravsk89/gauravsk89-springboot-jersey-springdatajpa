@@ -1,0 +1,11 @@
+package org.practice.springjersey.repository;
+
+import org.practice.springjersey.domain.User;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepository extends CrudRepository<User, Long>{
+
+
+}

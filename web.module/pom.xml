@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.practice.springjersey</groupId>
+        <artifactId>parent-pom</artifactId>
+        <version>1.0</version>
+        <relativePath>..</relativePath>
+    </parent>
+
+    <groupId>org.practice.springjersey</groupId>
+    <artifactId>web.module</artifactId>
+    <packaging>war</packaging>
+    <version>1.0</version>
+    <name>Web Module</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.practice.springjersey</groupId>
+            <artifactId>core.module</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+        <groupId>org.practice.springjersey</groupId>
+        <artifactId>data.module</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring.boot.version}</version>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.springframework</groupId>
+                        <artifactId>springloaded</artifactId>
+                        <version>${spring.springloaded.version}</version>
+                    </dependency>
+                </dependencies>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                    <jvmArguments>
+                        ${spring.springloaded.debug}${spring.springloaded.verbose}
+                    </jvmArguments>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
