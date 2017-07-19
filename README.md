@@ -7,3 +7,4 @@ Frameworks used:
 2. Jersey 2.0.1
 3. Spring Data JPA
 4. Embedded Database H2
+5. Lombok 1.16.12
